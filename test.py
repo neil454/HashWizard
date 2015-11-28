@@ -2,25 +2,25 @@
 import tweepy
 from keys import *
 
+WOEID_UNITED_STATE = 23424977
+labels = ["BlackLivesMatter", "BostonStrong", "PlannedParenthood", "TheWalkingDead", "GameOfThrones",  "PrayForParis", "BlackFriday", "HappyThanksgiving"]
 
 auth = tweepy.OAuthHandler(consumer_token, consumer_secret)
-#auth.set_access_token(access_token, access_secret)     # actually we don't need this unless we access our personal timeline
-
+auth.set_access_token(access_token, access_secret)     # actually we don't need this unless we access our personal timeline
 
 api = tweepy.API(auth)
 
 # for status in tweepy.Cursor(api.user_timeline).items(200):
 #     print status
 
-trends = api.trends_place(1)
-#print trends
-
-hashtags = [x['name'] for x in trends[0]['trends'] if x['name'].startswith('#')]
-for i in range(5):      # seems like I can't get more than 5...
-    print hashtags[i]
+# trends = api.trends_place(WOEID_UNITED_STATE, include="hashtags")
+#
+# hashtags = [x['name'] for x in trends[0]['trends'] if x['name'].startswith('#')]
+# for hashtag in hashtags:
+#     print hashtag
 
 places = api.geo_search(query="United States", granularity="country")
 place_id = places[0].id
 
-for status in tweepy.Cursor(api.search, q="place:" + place_id + " " + "TheWalkingDead", geocode="39.252099,-76.823111,3000mi").items(10):
+for status in tweepy.Cursor(api.search, q="place:" + place_id + " " + "BlackFriday", geocode="39.252099,-76.823111,3000mi").items(10):
     print(status)
