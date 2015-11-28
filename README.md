@@ -7,15 +7,15 @@ A program that predicts and suggests Twitter Hashtags based on a given tweet. Cr
 
 ## TODO
  - Finalize list of hashtag labels (Narrow down to 5 or 10?)
- - Finalize method of fetching tweets (should be good now, but we should narrow to English tweets only)
+ - Finalize method of fetching tweets (should be good now, ~~but we should narrow to English tweets only~~)
  - Fetch 1000? tweets for each hashtag
  - Preprocess data:
     - Filter out garbage tweets somehow?
-    - Remove excess tweet metadata (only use actual tweet for now)
-    - Remove label hashtag in actual tweet (remove other hashtags as well?)
-    - Remove other tweet junk (links, etc.)
-    - Filter out unimportant key words in tweet (unless we can use tools to do this for us)
- - Look for some libraries that can automatically do classification based on text content (Bag of Words?)
+    - ~~Remove excess tweet metadata (only use actual tweet for now)~~
+    - ~~Remove label hashtag in actual tweet (remove other hashtags as well?)~~
+    - ~~Remove other tweet junk (links, etc.)~~
+    - ~~Filter out unimportant key words in tweet (unless we can use tools to do this for us)~~
+ - Look for some libraries that can automatically do classification based on text content (Word2Vec is good)
     - If it can filter out unimportant parts of the text data, that would help a lot
 
 ## Notes
