@@ -8,6 +8,10 @@ If you're using PyCharm (highly recommended), DO NOT commit any files from the
 .idea folder, as those files are specific to your PyCharm workspace.
 Using PyCharm's built-in Version Control Software should prevent any headaches.
 
+Also, before you start working and before you commit anything, 
+PULL FROM THE REPO FIRST!
+Merging can be a headache when dealing with conflicting files.
+
 ## Dependencies
  - Python (Anaconda Python 2.7 Recommended: https://www.continuum.io/downloads)
  - Tweepy (https://github.com/tweepy/tweepy#installation)
