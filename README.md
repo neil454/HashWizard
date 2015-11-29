@@ -1,5 +1,12 @@
 # HashWizard
-A program that predicts and suggests Twitter Hashtags based on a given tweet. Created by Team Hotline Bling for CMSC471.
+A program that predicts and suggests Twitter Hashtags based on a given tweet.
+Created by Team Hotline Bling for CMSC471.
+
+## IMPORTANT NOTE FOR GROUP MEMBERS
+When creating commits, make sure you're only adding/modifying important files.
+If you're using PyCharm (highly recommended), DO NOT commit any files from the 
+.idea folder, as those files are specific to your PyCharm workspace.
+Using PyCharm's built-in Version Control Software should prevent any headaches.
 
 ## Dependencies
  - Python (Anaconda Python 2.7 Recommended: https://www.continuum.io/downloads)
