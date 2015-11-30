@@ -15,6 +15,7 @@ Merging can be a headache when dealing with conflicting files.
 ## Dependencies
  - Python (Anaconda Python 2.7 Recommended: https://www.continuum.io/downloads)
  - Tweepy (https://github.com/tweepy/tweepy#installation)
+ - gensim (http://radimrehurek.com/gensim/apiref.html)
 
 ## TODO
  - Finalize method of fetching tweets (should be good now, ~~but we should narrow to English tweets only~~)
