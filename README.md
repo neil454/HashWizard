@@ -17,7 +17,6 @@ Merging can be a headache when dealing with conflicting files.
  - Tweepy (https://github.com/tweepy/tweepy#installation)
 
 ## TODO
- - Finalize list of hashtag labels (Narrow down to 5 or 10?)
  - Finalize method of fetching tweets (should be good now, ~~but we should narrow to English tweets only~~)
  - Fetch 1000? tweets for each hashtag
  - Preprocess data:
