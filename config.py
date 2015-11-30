@@ -14,6 +14,6 @@ Section: 02
 
 """
 
-# LABELS = ["BlackLivesMatter", "BostonStrong", "PlannedParenthood", "TheWalkingDead", "GameOfThrones",  "PrayForParis", "BlackFriday", "HappyThanksgiving"]
-LABELS = ["BlackLivesMatter"]
+LABELS = ["BlackLivesMatter", "PlannedParenthood", "TheWalkingDead", "GameOfThrones",  "PrayForParis", "BlackFriday", "HappyThanksgiving", "FeelTheBern", "ClimateMarch", "NFL", "SyrianRefugees", "Trump", "MLB", "NBA", "NHL", "Soccer"]
+# LABELS = ["BlackLivesMatter"]
 LANGUAGE_FILTER = "en"

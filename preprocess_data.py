@@ -46,9 +46,9 @@ def preprocess_tweet(tweet):
     # Remove punctuation by replacing all chars that aren't alphanumeric or '-', with whitespace
     tweet = re.sub("[^a-zA-Z0-9 -]", " ", tweet)
 
-    # Cleanup tweet by replacing all sequential spaces with one space
-    tweet = ' '.join(tweet.split())
-
+    # Cleanup tweet by replacing all sequential spaces with one space, and remove all 1/2-letter words
+    # Also remove any "amp"s, which show up a lot for some reason in tweets
+    tweet = ' '.join(word for word in tweet.split() if len(word) > 2 and word != "amp")
     return tweet
 
 
@@ -57,10 +57,16 @@ def main():
         with open(name="./corpus_raw/" + label + ".txt", mode='r') as data_file:
             tweets = data_file.readlines()
         with open(name="./corpus_preproc/" + label + ".txt", mode='w') as data_preproc_file:
+            tweets_preproc = []
             for tweet in tweets:
                 preprocessed_tweet = preprocess_tweet(tweet)
-                data_preproc_file.write(preprocessed_tweet+"\n")
+                tweets_preproc.append(preprocessed_tweet)
+                # data_preproc_file.write(preprocessed_tweet+"\n")
                 # print preprocessed_tweet
+            tweets_preproc_no_duplicates = list(set(tweets_preproc))
+            for tweet in tweets_preproc_no_duplicates:
+                data_preproc_file.write(tweet+"\n")
+        print label, "PREPROCESSING DONE"
 
 if __name__ == "__main__":
     main()

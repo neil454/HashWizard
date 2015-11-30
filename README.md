@@ -18,18 +18,9 @@ Merging can be a headache when dealing with conflicting files.
  - gensim (http://radimrehurek.com/gensim/apiref.html)
 
 ## TODO
- - Finalize method of fetching tweets (should be good now, ~~but we should narrow to English tweets only~~)
- - Fetch 1000? tweets for each hashtag
- - Preprocess data:
-    - Filter out garbage tweets somehow?
-    - Remove duplicate tweets. (RTs show up multiple times)
-    - ~~Remove excess tweet metadata (only use actual tweet for now)~~
-    - ~~Remove label hashtag in actual tweet (remove other hashtags as well?)~~
-    - ~~Remove other tweet junk (links, etc.)~~
-    - ~~Filter out unimportant key words in tweet (unless we can use tools to do this for us)~~
- - Look for some libraries that can automatically do classification based on text content (Word2Vec is good)
-    - If it can filter out unimportant parts of the text data, that would help a lot
+ - Classification using simple word frequency
+ - More advanced classification using Word2Vec to improve accuracy maybe
 
 ## Notes
  - Twitter API only allows fetching tweets from the past week, so our hashtag labels should be fairly current
- - 
+ 

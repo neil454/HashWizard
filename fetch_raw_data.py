@@ -18,16 +18,16 @@ import tweepy
 from keys import *
 from config import *
 
-TWEET_FETCH_LIMIT = 10
+TWEET_FETCH_LIMIT = 10000
 
 auth = tweepy.OAuthHandler(consumer_token, consumer_secret)
 # auth.set_access_token(access_token, access_secret)     # actually we don't need this unless we access our personal timeline
 
-api = tweepy.API(auth)
+api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 for label in LABELS:
     with open(name="./temp/" + label + ".txt", mode='w') as data_file:
         for status in tweepy.Cursor(api.search, q=label, lang=LANGUAGE_FILTER).items(TWEET_FETCH_LIMIT):
             raw_tweet = status.text.encode('UTF-8').replace('\n', ' ')
             data_file.write(raw_tweet+"\n")
-            # print raw_tweet
+            print label, "-", raw_tweet
