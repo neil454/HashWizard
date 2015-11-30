@@ -22,6 +22,7 @@ Merging can be a headache when dealing with conflicting files.
  - Fetch 1000? tweets for each hashtag
  - Preprocess data:
     - Filter out garbage tweets somehow?
+    - Remove duplicate tweets. (RTs show up multiple times)
     - ~~Remove excess tweet metadata (only use actual tweet for now)~~
     - ~~Remove label hashtag in actual tweet (remove other hashtags as well?)~~
     - ~~Remove other tweet junk (links, etc.)~~
