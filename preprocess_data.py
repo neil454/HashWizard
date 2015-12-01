@@ -54,9 +54,9 @@ def preprocess_tweet(tweet):
 
 def main():
     for label in LABELS:
-        with open(name="./corpus_raw/" + label + ".txt", mode='r') as data_file:
+        with open(name="./corpus_raw/".join(label.join(".txt")), mode='r') as data_file:
             tweets = data_file.readlines()
-        with open(name="./corpus_preproc/" + label + ".txt", mode='w') as data_preproc_file:
+        with open(name="./corpus_preproc/".join(label.join(".txt")), mode='w') as data_preproc_file:
             tweets_preproc = []
             for tweet in tweets:
                 preprocessed_tweet = preprocess_tweet(tweet)
@@ -65,7 +65,7 @@ def main():
                 # print preprocessed_tweet
             tweets_preproc_no_duplicates = list(set(tweets_preproc))
             for tweet in tweets_preproc_no_duplicates:
-                data_preproc_file.write(tweet+"\n")
+                data_preproc_file.write(tweet.join("\n"))
         print label, "PREPROCESSING DONE"
 
 if __name__ == "__main__":
