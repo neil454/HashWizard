@@ -15,6 +15,7 @@ Section: 02
 """
 
 import tweepy
+import os
 from keys import *
 from config import *
 
@@ -26,6 +27,8 @@ auth = tweepy.OAuthHandler(consumer_token, consumer_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
 
 for label in LABELS:
+    if not os.path.isdir("./temp"):
+        os.makedirs("./temp")
     with open(name="./temp/" + label + ".txt", mode='w') as data_file:
         for status in tweepy.Cursor(api.search, q=label, lang=LANGUAGE_FILTER).items(TWEET_FETCH_LIMIT):
             raw_tweet = status.text.encode('UTF-8').replace('\n', ' ')
