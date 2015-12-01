@@ -17,3 +17,4 @@ Section: 02
 LABELS = ["BlackLivesMatter", "PlannedParenthood", "TheWalkingDead", "GameOfThrones",  "PrayForParis", "BlackFriday", "HappyThanksgiving", "FeelTheBern", "ClimateMarch", "NFL", "SyrianRefugees", "Trump", "MLB", "NBA", "NHL", "Soccer"]
 # LABELS = ["BlackLivesMatter"]
 LANGUAGE_FILTER = "en"
+TWEET_FETCH_LIMIT = 10000

@@ -19,8 +19,6 @@ import os
 from keys import *
 from config import *
 
-TWEET_FETCH_LIMIT = 10000
-
 auth = tweepy.OAuthHandler(consumer_token, consumer_secret)
 # auth.set_access_token(access_token, access_secret)     # actually we don't need this unless we access our personal timeline
 
