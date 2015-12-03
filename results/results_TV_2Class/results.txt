@@ -1,0 +1,13 @@
+=====RESULTS=====
+Training Size: 8675, Testing Size: 964 (TOTAL=9639)
+# of Classes/Labels: 2
+LABELS:  ['GameOfThrones', 'TheWalkingDead']
+Vocabulary Size: 10000
+
+PREDICTION ACCURACY: 0.901340248963
+Confusion Matrix:
+                     -Predicted-
+-Actual-             #GameOfThrones       #TheWalkingDead
+#GameOfThrones       443                  55
+#TheWalkingDead      43                   423
+=================

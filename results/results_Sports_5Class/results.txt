@@ -1,0 +1,16 @@
+=====RESULTS=====
+Training Size: 18329, Testing Size: 2037 (TOTAL=20366)
+# of Classes/Labels: 5
+LABELS:  ['MLB', 'NBA', 'NFL', 'NHL', 'Soccer']
+Vocabulary Size: 10000
+
+PREDICTION ACCURACY: 0.837015218459
+Confusion Matrix:
+                     -Predicted-
+-Actual-             #MLB                 #NBA                 #NFL                 #NHL                 #Soccer
+#MLB                 358                  14                   18                   19                   17
+#NBA                 16                   306                  16                   24                   10
+#NFL                 21                   9                    267                  16                   19
+#NHL                 24                   19                   25                   323                  16
+#Soccer              9                    13                   13                   14                   451
+=================

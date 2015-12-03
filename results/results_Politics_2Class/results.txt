@@ -1,0 +1,13 @@
+=====RESULTS=====
+Training Size: 6437, Testing Size: 716 (TOTAL=7153)
+# of Classes/Labels: 2
+LABELS:  ['FeelTheBern', 'Trump']
+Vocabulary Size: 10000
+
+PREDICTION ACCURACY: 0.906424581006
+Confusion Matrix:
+                     -Predicted-
+-Actual-             #FeelTheBern         #Trump
+#FeelTheBern         286                  20
+#Trump               47                   363
+=================

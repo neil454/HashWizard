@@ -8,8 +8,9 @@ from sklearn.metrics import confusion_matrix
 from config import *
 import preprocess_data
 
-PERCENT_TEST_SET = 10
-VOCAB_SIZE = 5000
+PERCENT_TEST_SET = 10   # Percent of data to go towards testing, remaining will go to training
+VOCAB_SIZE = 10000      # Leave this at 5000, 10000 doesn't add much accuracy and takes 2x the time
+NUM_CORES_UTILIZED = -1  # Leave this at -1 unless you don't want this process to hog your CPU
 # Change classes by modifying LABELS in config.py
 
 # Step 1: Load preprocessed data into all_data, which is an array of tuples (tweet, label/hashtag)
@@ -61,7 +62,7 @@ print "Top 50 words in vocab:", sorted(word_count, reverse=True)[:50]
 # Step 5: Random Forest Classification - Training
 print "\nTraining the random forest (this will take a while)..."
 # Initialize a Random Forest classifier with 100 trees, use multi-threading
-forest = RandomForestClassifier(n_estimators=100, n_jobs=-1)
+forest = RandomForestClassifier(n_estimators=100, n_jobs=NUM_CORES_UTILIZED)
 
 # Fit the forest to the training set, using the bag of words as
 # features and the sentiment labels as the response variable
@@ -82,7 +83,7 @@ results = forest.predict(test_data_features)
 # Step 7: Generate results/statistics
 # Iterate through results, count the number of correct predictions
 correct_count = 0.0
-with open("results.txt", "w") as results_file:
+with open("./results/predictions.txt", "w") as results_file:
     for i in range(len(test_labels)):
         results_file.write("Tweet:     " + test_data[i] + "\nPredicted: " + results[i] + "\nActual:    " + test_labels[i] + "\n\n")
         if results[i] == test_labels[i]:
@@ -92,7 +93,7 @@ with open("results.txt", "w") as results_file:
 print "\n=====RESULTS====="
 print "Training Size: " + str(len(train_data)) + ", Testing Size: " + str(len(test_data)) + " (TOTAL=" + str(len(all_data)) + ")"
 print "# of Classes/Labels: " + str(len(LABELS))
-print "LABELS: ", LABELS
+print "LABELS: ", sorted(LABELS)
 print "Vocabulary Size:", VOCAB_SIZE
 
 print "\nPREDICTION ACCURACY:", correct_count/len(test_labels)
