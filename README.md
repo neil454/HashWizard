@@ -15,11 +15,14 @@ Merging can be a headache when dealing with conflicting files.
 ## Dependencies
  - Python (Anaconda Python 2.7 Recommended: https://www.continuum.io/downloads)
  - Tweepy (https://github.com/tweepy/tweepy#installation)
- - gensim (http://radimrehurek.com/gensim/apiref.html)
+ - Numpy (http://www.numpy.org/) - Included in Anaconda Python
+ - Scikit-learn (http://scikit-learn.org/stable/)
 
 ## TODO
- - Classification using simple word frequency
- - More advanced classification using Word2Vec to improve accuracy maybe
+ - Improve accuracy (low-priority)
+     - Use Word2Vec to group similar words
+     - Heavier pre-processing on raw data
+     - Tweak some variables
 
 ## Notes
  - Twitter API only allows fetching tweets from the past week, so our hashtag labels should be fairly current
