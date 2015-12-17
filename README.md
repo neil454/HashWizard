@@ -14,7 +14,7 @@ Merging can be a headache when dealing with conflicting files.
 
 ## Dependencies
  - Python (Anaconda Python 2.7 Recommended: https://www.continuum.io/downloads)
- - Tweepy (https://github.com/tweepy/tweepy#installation)
+ - Tweepy (https://github.com/tweepy/tweepy#installation) - Not needed if using existing data
  - Numpy (http://www.numpy.org/) - Included in Anaconda Python
  - Scikit-learn (http://scikit-learn.org/stable/) - Included in Anaconda Python
  
