@@ -16,7 +16,7 @@ Section: 02
 # All 16 Hashtags (all data collected)
 # LABELS = ["BlackLivesMatter", "PlannedParenthood", "TheWalkingDead", "GameOfThrones",  "PrayForParis", "BlackFriday", "HappyThanksgiving", "FeelTheBern", "ClimateMarch", "NFL", "SyrianRefugees", "Trump", "MLB", "NBA", "NHL", "Soccer"]
 
-# Best 10 performing classes
+# Best 10 performing Hashtags
 LABELS = ["PlannedParenthood", "TheWalkingDead", "FeelTheBern", "ClimateMarch", "NFL", "Trump", "MLB", "NBA", "NHL", "Soccer"]
 
 # Genre-specific Hashtags:

@@ -17,6 +17,12 @@ Merging can be a headache when dealing with conflicting files.
  - Tweepy (https://github.com/tweepy/tweepy#installation)
  - Numpy (http://www.numpy.org/) - Included in Anaconda Python
  - Scikit-learn (http://scikit-learn.org/stable/) - Included in Anaconda Python
+ 
+## Usage Instructions
+ - Modify LABELS in config.py to change the type of class problem desired
+ - Use fetch_raw_data.py to get raw twitter data (already done)
+ - Use preprocess_data.py to clean the raw twitter data (already done)
+ - Run classification.py to calculate accuracy and allow user input
 
 ## TODO
  - Improve accuracy (low-priority)
